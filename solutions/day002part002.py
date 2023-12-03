@@ -4,12 +4,15 @@ input = input.text_to_string("2")
 
 games = input.split("\n")
 
+
 def replace_if_higher(highest_values, amount, colour):
     highest_values[colour] = max(highest_values[colour], amount)
     return highest_values
 
+
 def calc_cube_set_power(values):
     return values["red"] * values["green"] * values["blue"]
+
 
 def calc_cube_set_powers():
     powers = []
@@ -26,7 +29,8 @@ def calc_cube_set_powers():
             cube_groups = handful.strip().split(", ")
             for cube_group in cube_groups:
                 amount, colour = cube_group.split(" ")
-                highest_values = replace_if_higher(highest_values, int(amount), colour)
+                highest_values = replace_if_higher(
+                    highest_values, int(amount), colour)
 
         powers.append(calc_cube_set_power(highest_values))
 
