@@ -4,8 +4,6 @@ input = input.text_to_string("2")
 
 games = input.split("\n")
 
-limits = { "red": 12, "green": 13, "blue": 14 }
-
 def replace_if_higher(highest_values, amount, colour):
     highest_values[colour] = max(highest_values[colour], amount)
     return highest_values
