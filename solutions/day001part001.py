@@ -12,8 +12,7 @@ def accumulate(start_value, list, extractor, operation):
 
 def extract_number(line):
     digits = ''.join(char for char in line if char.isdigit())
-    number = int(digits[0] + digits[-1])
-    return number
+    return int(digits[0] + digits[-1])
 
 def add(a, b):
     return a + b
