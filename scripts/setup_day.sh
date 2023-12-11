@@ -27,7 +27,11 @@ mkdir -p "$solutions_dir"
 
 skeleton_code="from utils import input
 
-input = input.text_to_string(\"$day\")"
+input = input.text_to_string(\"$day\")
+
+answer = 0
+
+print(f\"Solution: {answer}\")"
 
 solution_file_1="$solutions_dir/day${day}part001.py"
 if [ ! -e "$solution_file_1" ]; then
